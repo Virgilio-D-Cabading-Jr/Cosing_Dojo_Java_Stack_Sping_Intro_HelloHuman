@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
 
 	@RequestMapping("/")
-	public String index(@RequestParam(value="name", required=false) String searchName) {
-		if (searchName == null) {
+	public String index(@RequestParam(value="name", required=false) String name) {
+		if (name == null) {
 			return "Hello Human";
 		} else {
-			return "Hello " + searchName;
+			return "Hello " + name;
 		}
 	}
 }
